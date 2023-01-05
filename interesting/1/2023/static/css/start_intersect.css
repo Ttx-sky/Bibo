@@ -1,0 +1,94 @@
+
+
+        #div_intersect {
+            position: relative;
+            width: 100%;
+            z-index: 666;
+            display: none;
+            background-repeat: repeat;
+            background-size: 100%;
+            overflow: hidden;
+        }
+        #div_is_inner {
+            position:absolute;
+            top: 0;right: 0;left: 0;bottom: 0;
+            width: 100%;
+            min-height: 160px;
+            background: rgba(255,255,255,.85);
+        }
+
+
+
+        #canvas_is {
+            position: absolute;
+            display: block;
+            margin: 0 auto;
+        }
+
+
+
+        .div_is_typed {
+            width: 500px;
+            position: absolute;
+            top: 0;right: 0;left: 0;bottom: 0;
+            z-index: 668;
+            -webkit-overflow-scrolling: touch;
+            padding: 10%;
+            font-size: 1.2em;
+            overflow: scroll;
+        }
+        #div_is_img {
+            width: 100%;
+            max-height: 320px;
+            object-fit: cover;
+            display: none;
+            overflow: hidden;
+            margin: 0px 0px 15px 0px;
+            background-color: white;
+            border: 15px solid white;
+            border-radius: 3px;
+            display: none;
+        }
+        #div_is_img img {
+            width: 100%;
+        }
+
+
+
+        .div_is_open_bg {
+            width: 500px;
+            display: block;
+            background-color: rgba(255, 255, 255, 0.85);
+            position: fixed;
+            z-index: 669;
+        }
+        .div_is_open_btn {
+            width: 100px;
+            height: 54px;
+            margin: 200px auto;
+            background-image: url("../images/open_letter.jpg")/*tpa=http://love.wazf.top/S89/images/open_letter.jpg*/;
+            border-radius:3px;
+            overflow:hidden;
+            -moz-box-shadow:0px 0px 10px #999;
+            -webkit-box-shadow:0px 0px 10px #999;
+            box-shadow:0px 0px 10px #999;
+            animation-name: heartbeat;
+            animation-duration: 2000ms;
+            animation-timing-function: cubic-bezier(0,0,0,1.74);
+            animation-delay: 500ms;
+            animation-iteration-count: infinite;
+            animation-play-state: running;
+        }
+        @keyframes heartbeat {
+            0% {
+                transform: scale(0.95);
+            }
+
+            100% {
+                transform: scale(0.95);
+            }
+
+            50% {
+                transform: scale(1);
+            }
+        }
